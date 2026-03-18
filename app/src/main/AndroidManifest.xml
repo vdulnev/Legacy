@@ -10,6 +10,59 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Legacy" />
+        android:theme="@style/Theme.Legacy">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activities.LayoutsDemoActivity"
+            android:label="XML Layouts"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.ViewsDemoActivity"
+            android:label="Common Views"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.IntentsDemoActivity"
+            android:label="Intents"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.LifecycleDemoActivity"
+            android:label="Activity Lifecycle"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.RecyclerDemoActivity"
+            android:label="RecyclerView"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.FragmentsDemoActivity"
+            android:label="Fragments"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".activities.SqliteDemoActivity"
+            android:label="SQLite Database"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+    </application>
 
 </manifest>

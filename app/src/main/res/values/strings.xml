@@ -1,3 +1,103 @@
 <resources>
-    <string name="app_name">Legacy</string>
+    <string name="app_name">Legacy Android</string>
+    <string name="title_xml_layouts">XML Layouts</string>
+    <string name="title_common_views">Common Views</string>
+    <string name="title_intents">Intents</string>
+    <string name="title_lifecycle">Activity Lifecycle</string>
+    <string name="title_recyclerview">RecyclerView</string>
+    <string name="title_fragments">Fragments</string>
+    <string name="title_sqlite">SQLite Database</string>
+
+    <!-- Main screen -->
+    <string name="label_legacy_learning">Legacy Android Learning</string>
+
+    <!-- Layouts demo -->
+    <string name="header_xml_layouts_demo">XML Layouts Demo</string>
+    <string name="label_linearlayout_vertical">LinearLayout — Vertical</string>
+    <string name="label_linearlayout_horizontal">LinearLayout — Horizontal (equal weight)</string>
+    <string name="label_relativelayout">RelativeLayout</string>
+    <string name="label_constraintlayout">ConstraintLayout</string>
+    <string name="item_1">Item 1</string>
+    <string name="item_2">Item 2</string>
+    <string name="item_3">Item 3</string>
+    <string name="pos_top_left">Top Left</string>
+    <string name="pos_top_right">Top Right</string>
+    <string name="pos_center">Center</string>
+    <string name="pos_bottom_left">Bottom Left</string>
+    <string name="pos_bottom_right">Bottom Right</string>
+    <string name="constraint_a">A</string>
+    <string name="constraint_b">B</string>
+    <string name="constraint_c">C</string>
+
+    <!-- Views demo -->
+    <string name="section_textview">TextView</string>
+    <string name="section_edittext">EditText</string>
+    <string name="section_button">Button</string>
+    <string name="section_checkbox">CheckBox</string>
+    <string name="section_radiogroup">RadioGroup + RadioButton</string>
+    <string name="section_switch">Switch</string>
+    <string name="section_spinner">Spinner</string>
+    <string name="section_seekbar">SeekBar</string>
+    <string name="section_progressbar">ProgressBar</string>
+    <string name="text_bold">Bold Text</string>
+    <string name="text_italic">Italic Text</string>
+    <string name="text_large">Large Text (20sp)</string>
+    <string name="text_colored">Colored Text</string>
+    <string name="hint_plain_text">Plain text input</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_number">Number input</string>
+    <string name="hint_multiline">Multiline input…\nLine 2\nLine 3</string>
+    <string name="btn_regular">Regular Button</string>
+    <string name="btn_outlined">Outlined Button</string>
+    <string name="btn_disabled">Disabled Button</string>
+    <string name="checkbox_option_1">Option A</string>
+    <string name="checkbox_option_2">Option B (checked)</string>
+    <string name="checkbox_option_3">Option C</string>
+    <string name="radio_option_1">Radio Option 1</string>
+    <string name="radio_option_2">Radio Option 2 (selected)</string>
+    <string name="radio_option_3">Radio Option 3</string>
+    <string name="switch_label">Enable feature</string>
+    <string name="seekbar_value_prefix">Value: </string>
+    <string name="seekbar_initial_value">Value: 0</string>
+
+    <!-- Intents demo -->
+    <string name="header_intents_demo">Intents Demo</string>
+    <string name="section_explicit_intents">Explicit Intents</string>
+    <string name="section_implicit_intents">Implicit Intents</string>
+    <string name="section_pass_data">Pass Data Between Activities</string>
+    <string name="btn_go_lifecycle">Go to Lifecycle Demo →</string>
+    <string name="btn_open_browser">Open Browser</string>
+    <string name="btn_share_text">Share Text</string>
+    <string name="btn_dial_number">Dial Number</string>
+    <string name="hint_enter_name">Enter your name</string>
+    <string name="btn_send_data">Send Data →</string>
+    <string name="label_received_data">No data received yet</string>
+
+    <!-- Lifecycle demo -->
+    <string name="current_state_prefix">Current State: </string>
+    <string name="state_created">Created</string>
+    <string name="btn_simulate_pause">Simulate Pause</string>
+    <string name="btn_clear_log">Clear Log</string>
+    <string name="label_lifecycle_log">Lifecycle Event Log:</string>
+
+    <!-- RecyclerView demo -->
+    <string name="hint_person_name">Person name</string>
+    <string name="btn_add">Add</string>
+
+    <!-- Fragments demo -->
+    <string name="btn_show_list">Show List Fragment</string>
+    <string name="btn_show_detail">Show Detail Fragment</string>
+    <string name="backstack_prefix">Backstack entries: </string>
+
+    <!-- Fragment list -->
+    <string name="header_list_fragment">List Fragment</string>
+
+    <!-- Fragment detail -->
+    <string name="btn_back_to_list">← Back to List</string>
+
+    <!-- SQLite demo -->
+    <string name="hint_note_title">Note title</string>
+    <string name="hint_note_content">Note content</string>
+    <string name="btn_save_note">Save Note</string>
+    <string name="label_saved_notes">Saved Notes:</string>
 </resources>
