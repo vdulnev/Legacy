@@ -6,6 +6,7 @@ import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import com.example.legacy.activities.LayoutsDemoActivity;
+import com.example.legacy.activities.ComposeDemoActivity;
 import com.example.legacy.activities.MvvmDemoActivity;
 import com.example.legacy.activities.LifecycleDemoActivity;
 import com.example.legacy.activities.FragmentsDemoActivity;
@@ -69,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Topic("MVVM Architecture",
                 "ViewModel · LiveData · Repository · DB API layers",
                 "#37474F", MvvmDemoActivity.class));
+        list.add(new Topic("Jetpack Compose",
+                "setContent · State · LazyColumn · AndroidView interop",
+                "#6200EE", ComposeDemoActivity.class));
         return list;
     }
 }

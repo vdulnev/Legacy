@@ -70,6 +70,12 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
 
+        <activity
+            android:name=".activities.ComposeDemoActivity"
+            android:label="Jetpack Compose"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
     </application>
 
 </manifest>
