@@ -5,18 +5,21 @@ package com.example.legacy.repository;
 // class and never touches TaskDbHelper directly. If you later swap SQLite
 // for a remote API, only this file changes.
 
-import android.content.Context;
 import com.example.legacy.database.TaskDbHelper;
 import com.example.legacy.models.Task;
 import java.util.List;
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
+@Singleton
 public class TaskRepository {
 
     private final TaskDbHelper dbHelper;
 
-    public TaskRepository(Context context) {
-        // Use application context to avoid leaking Activity references
-        dbHelper = new TaskDbHelper(context.getApplicationContext());
+    // Hilt sees @Inject here and resolves TaskDbHelper from its own binding.
+    @Inject
+    public TaskRepository(TaskDbHelper dbHelper) {
+        this.dbHelper = dbHelper;
     }
 
     public List<Task> getAll() {

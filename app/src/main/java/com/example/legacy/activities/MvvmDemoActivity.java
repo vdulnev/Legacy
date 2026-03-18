@@ -14,7 +14,12 @@ import com.example.legacy.adapters.TaskAdapter;
 import com.example.legacy.models.Task;
 import com.example.legacy.viewmodel.TaskViewModel;
 import java.util.ArrayList;
+import dagger.hilt.android.AndroidEntryPoint;
 
+// @AndroidEntryPoint makes Hilt inject this Activity and installs a
+// HiltViewModelFactory as the default factory, so ViewModelProvider
+// resolves @HiltViewModel-annotated ViewModels automatically.
+@AndroidEntryPoint
 public class MvvmDemoActivity extends BaseActivity implements TaskAdapter.Listener {
 
     private TaskViewModel viewModel;

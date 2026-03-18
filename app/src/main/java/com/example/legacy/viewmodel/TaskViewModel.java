@@ -3,18 +3,23 @@ package com.example.legacy.viewmodel;
 // Layer 3 — ViewModel
 // Survives configuration changes (rotation). Exposes immutable LiveData so
 // the Activity can observe state without the ViewModel holding a View reference.
-// All business decisions live here; the Activity is just a display.
+//
+// @HiltViewModel tells Hilt to generate a factory for this ViewModel so that
+// ViewModelProvider can instantiate it with injected dependencies.
+// Extends ViewModel (not AndroidViewModel) — the repository is injected
+// directly so no Application context is needed here.
 
-import android.app.Application;
-import androidx.annotation.NonNull;
-import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 import com.example.legacy.models.Task;
 import com.example.legacy.repository.TaskRepository;
 import java.util.List;
+import javax.inject.Inject;
+import dagger.hilt.android.lifecycle.HiltViewModel;
 
-public class TaskViewModel extends AndroidViewModel {
+@HiltViewModel
+public class TaskViewModel extends ViewModel {
 
     private final TaskRepository repository;
 
@@ -22,9 +27,9 @@ public class TaskViewModel extends AndroidViewModel {
     // The Activity receives the read-only LiveData<> interface.
     private final MutableLiveData<List<Task>> tasksLiveData = new MutableLiveData<>();
 
-    public TaskViewModel(@NonNull Application application) {
-        super(application);
-        repository = new TaskRepository(application);
+    @Inject
+    public TaskViewModel(TaskRepository repository) {
+        this.repository = repository;
         refresh();
     }
 

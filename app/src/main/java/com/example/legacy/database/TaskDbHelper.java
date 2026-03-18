@@ -9,23 +9,28 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import androidx.annotation.Nullable;
 import com.example.legacy.models.Task;
 import java.util.ArrayList;
 import java.util.List;
+import javax.inject.Inject;
+import javax.inject.Singleton;
+import dagger.hilt.android.qualifiers.ApplicationContext;
 
+@Singleton
 public class TaskDbHelper extends SQLiteOpenHelper {
 
     private static final String DB_NAME    = "tasks.db";
     private static final int    DB_VERSION = 1;
 
-    static final String TABLE   = "tasks";
+    static final String TABLE         = "tasks";
     static final String COL_ID        = "_id";
     static final String COL_TITLE     = "title";
     static final String COL_DONE      = "done";       // 0 = false, 1 = true
     static final String COL_TIMESTAMP = "timestamp";
 
-    public TaskDbHelper(@Nullable Context context) {
+    // Hilt provides the application Context via @ApplicationContext.
+    @Inject
+    public TaskDbHelper(@ApplicationContext Context context) {
         super(context, DB_NAME, null, DB_VERSION);
     }
 
