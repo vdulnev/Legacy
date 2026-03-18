@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import com.example.legacy.activities.LayoutsDemoActivity;
+import com.example.legacy.activities.MvvmDemoActivity;
 import com.example.legacy.activities.LifecycleDemoActivity;
 import com.example.legacy.activities.FragmentsDemoActivity;
 import com.example.legacy.activities.IntentsDemoActivity;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setTitle("Legacy Android Learning");
         }
@@ -62,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
         list.add(new Topic("SQLite Database",
                 "SQLiteOpenHelper · CRUD · Cursor · Contract class",
                 "#6D4C41", SqliteDemoActivity.class));
+        list.add(new Topic("MVVM Architecture",
+                "ViewModel · LiveData · Repository · DB API layers",
+                "#37474F", MvvmDemoActivity.class));
         return list;
     }
 }
