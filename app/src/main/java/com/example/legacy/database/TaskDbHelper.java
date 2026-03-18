@@ -17,7 +17,7 @@ import javax.inject.Singleton;
 import dagger.hilt.android.qualifiers.ApplicationContext;
 
 @Singleton
-public class TaskDbHelper extends SQLiteOpenHelper {
+public class TaskDbHelper extends SQLiteOpenHelper implements TaskDataSource {
 
     private static final String DB_NAME    = "tasks.db";
     private static final int    DB_VERSION = 1;
