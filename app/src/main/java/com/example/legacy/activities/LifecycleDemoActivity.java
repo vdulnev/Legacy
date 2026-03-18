@@ -4,13 +4,12 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import com.example.legacy.R;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-public class LifecycleDemoActivity extends AppCompatActivity {
+public class LifecycleDemoActivity extends BaseActivity {
 
     private TextView textState;
     private TextView textLog;
@@ -96,9 +95,4 @@ public class LifecycleDemoActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return true;
-    }
 }

@@ -3,12 +3,11 @@ package com.example.legacy.activities;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
 import com.example.legacy.R;
 import com.example.legacy.fragments.DetailFragment;
 import com.example.legacy.fragments.ListFragment;
 
-public class FragmentsDemoActivity extends AppCompatActivity
+public class FragmentsDemoActivity extends BaseActivity
         implements ListFragment.OnItemSelectedListener {
 
     private TextView textBackstack;
@@ -71,9 +70,4 @@ public class FragmentsDemoActivity extends AppCompatActivity
         showDetailFragment(title, body);
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return true;
-    }
 }

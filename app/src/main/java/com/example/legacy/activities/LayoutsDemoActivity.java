@@ -1,10 +1,9 @@
 package com.example.legacy.activities;
 
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 import com.example.legacy.R;
 
-public class LayoutsDemoActivity extends AppCompatActivity {
+public class LayoutsDemoActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +15,4 @@ public class LayoutsDemoActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return true;
-    }
 }

@@ -4,14 +4,13 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.legacy.R;
 import com.example.legacy.adapters.PersonAdapter;
 import com.example.legacy.models.Person;
 
-public class RecyclerDemoActivity extends AppCompatActivity {
+public class RecyclerDemoActivity extends BaseActivity {
 
     private PersonAdapter adapter;
     private int personCounter = 1;
@@ -56,9 +55,4 @@ public class RecyclerDemoActivity extends AppCompatActivity {
         });
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return true;
-    }
 }

@@ -6,7 +6,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 import com.example.legacy.R;
 import com.example.legacy.database.NoteDbHelper;
 import com.example.legacy.models.Note;
@@ -15,7 +14,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class SqliteDemoActivity extends AppCompatActivity {
+public class SqliteDemoActivity extends BaseActivity {
 
     private NoteDbHelper dbHelper;
     private ArrayAdapter<String> listAdapter;
@@ -82,9 +81,4 @@ public class SqliteDemoActivity extends AppCompatActivity {
         dbHelper.close();
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        finish();
-        return true;
-    }
 }
